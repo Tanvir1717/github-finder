@@ -10,8 +10,9 @@ searchBtn.addEventListener('click', (e) => {
             .then(result => result.json())
             .then(data => {
                 console.log(data);
-                if (data.message == 'Not Found') {} else {
+                if (data.message == 'Not Found') {
                     ui.showAlert("User not found!", "alert alert-danger");
+                } else {
                     ui.showProfile(data);
                 }
             })
